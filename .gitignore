@@ -4,7 +4,7 @@ coverage.json
 node_modules
 typechain
 typechain-types
-
+.vscode/
 #Hardhat files
 artifacts
 cache

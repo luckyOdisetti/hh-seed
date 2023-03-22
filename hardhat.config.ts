@@ -6,16 +6,10 @@ import "hardhat-gas-reporter";
 
 dotenv.config();
 
-// Dear Student,
-//
 // This hardhat.config.ts file differs from the Hardhat project boilerplate generated
-// when you run `npx hardhat` in a new directory. We suggest you add these same lines
-// of code to your future projects, in order to easily setup:
+// when you run `npx hardhat` in a new directory.  This file sets up:
 // - environment variables via `dotenv` (you'll need to `mv .env.example .env`)
 // - Etherscan source verification
-//
-// Love,
-// Macro Instruction Team
 
 const config: HardhatUserConfig = {
   solidity: {
