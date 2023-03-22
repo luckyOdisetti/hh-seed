@@ -24,6 +24,12 @@ describe("Lock", function () {
   }
 
   describe("Deployment", function () {
+    // test to make sure eslint is flagging floating promises correctly
+    it("Flags floating promises", async () => {
+      const { lock, owner } = await loadFixture(deployOneYearLockFixture);
+      const txReceiptUnresolved = await lock.connect(owner).create();
+      expect(txReceiptUnresolved.wait()).to.be.reverted;
+    });
     it("Should set the right unlockTime", async function () {
       const { lock, unlockTime } = await loadFixture(deployOneYearLockFixture);
 
